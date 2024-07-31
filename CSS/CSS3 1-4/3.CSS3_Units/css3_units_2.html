@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 단위 2</title>
     <style>
+      /* 색상 단위 */
 
-        /* 색상 단위 */
-
-        /* Hex 코드 단위 : */
-
-        /* RGB : */
-
-        /* RGBA : */
-
-        /* HSL : */
-
-        /* HSLA : */
-
+      /* Hex 코드 단위 : Red Green Blue 방식으로 우리어진 색상 표기법 #과 16진수로 이루어진 6자리 혹은 3자리 수로 색상을 표기하는 방법 */
+      .hex-1 {
+        color: #dc143c;
+      }
+      .hex-2 {
+        color: #800;
+      }
+      /* RGB : Red Green Blue 색상을 0~ 255 까지 10진수로 표기하는 방법 */
+      .rgb {
+        color: rgb(55, 181, 190);
+      }
+      /* RGBA : RGB에 0~1까지의 투명도(Alpha 채널)를 추가한 방법 (0이 완전투명, 1이 완전불투명*/
+      .rgba {
+        color: rgb(55, 181, 190, 0.4);
+      }
+      /* HSL : 색상, 채도, 명도 표기법으로 색상 0~360 까지의 정수, 채도와 명도는 백분률(0~100%)로 표현하는 방법*/
+      .hsl {
+        color: hsl(153, 100%, 50%);
+      }
+      /* HSLA : HSL에 0~1까지의 투명도(Alpha 채널)를 추가한 방법 (0이 완전투명, 1이 완전불투명*/
+      .hsla {
+        color: hsla(321, 100%, 70%, 0.5);
+      }
     </style>
-</head>
-<body>
-
-    <h3 class="hex-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-    <h3 class="hex-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-
-    <hr />
-
-    <h3 class="rgb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-
-    <hr />
-
-    <h3 class="rgba">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  </head>
+  <body>
+    <h3 class="hex-1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
+    <h3 class="hex-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
 
     <hr />
 
-    <h3 class="hsl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+    <h3 class="rgb">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
 
     <hr />
 
-    <h3 class="hsla">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+    <h3 class="rgba">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
 
     <hr />
-    
-</body>
+
+    <h3 class="hsl">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
+
+    <hr />
+
+    <h3 class="hsla">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </h3>
+
+    <hr />
+  </body>
 </html>
