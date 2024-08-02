@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Grid</title>
 
     <style>
-
-        /*
+      /*
             Grid : 
-                - 
-                - 
+                - 2차원 (행과 열) 레이아웃 시스템을 제공하고 복잡한 레이아웃 구성을 쉽게 할 수 있음
+                - 1차원 레이아웃은 flexbox가 유용, 2차원 레이아웃은 grid가 유용함
         */
 
-        /*
-            Grid Container 속성 : 
+      /*
+            Grid Container 속성 : grid item을 자식으로 가지는 부모 요소 display 속성 값을 grid 혹은 inline-grid로 지정 가능
         */
-
-
-
-        /*
+      .grid-container {
+        display: grid;
+      }
+      /*
             grid-template-columns 속성 : 
             grid-template-rows 속성 : 
             grid-template-areas 속성 : 
         */
 
-
-        
-        /*
+      /*
             grid-template 속성 : 
         */
 
-
-
-        /*
+      /*
             Grid Item 속성 : 
                 - grid-column-start : 
                 - grid-column-end : 
                 - grid-row-start : 
                 - grid-row-end : 
         */
-        
 
-
-        /*
+      /*
             Grid Item 단축 속성 : 
                 - 
                 - 
         */
-        
 
-
-        /*
+      /*
             grid-area 속성 : 
         */
-        
-        
-
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="grid-container grid-template-columns-rows">
-        <div style="background-color: rgba(255, 0, 0, 0.75);"></div>
-        <div style="background-color: rgba(0, 255, 0, 0.75);"></div>
-        <div style="background-color: rgba(0, 0, 255, 0.75);"></div>
-        <div style="background-color: rgba(255, 255, 0, 0.75);"></div>
-        <div style="background-color: rgba(0, 255, 255, 0.75);"></div>
-        <div style="background-color: rgba(255, 0, 255, 0.75);"></div>
-        <div style="background-color: rgba(255, 0, 0, 0.75);"></div>
-        <div style="background-color: rgba(0, 255, 0, 0.75);"></div>
-        <div style="background-color: rgba(0, 0, 255, 0.75);"></div>
+      <div style="background-color: rgba(255, 0, 0, 0.75)"></div>
+      <div style="background-color: rgba(0, 255, 0, 0.75)"></div>
+      <div style="background-color: rgba(0, 0, 255, 0.75)"></div>
+      <div style="background-color: rgba(255, 255, 0, 0.75)"></div>
+      <div style="background-color: rgba(0, 255, 255, 0.75)"></div>
+      <div style="background-color: rgba(255, 0, 255, 0.75)"></div>
+      <div style="background-color: rgba(255, 0, 0, 0.75)"></div>
+      <div style="background-color: rgba(0, 255, 0, 0.75)"></div>
+      <div style="background-color: rgba(0, 0, 255, 0.75)"></div>
     </div>
 
     <br />
@@ -80,10 +67,10 @@
     <br />
 
     <div class="grid-container grid-template-columns-rows">
-        <div class="header-1"></div>
-        <div class="main-1"></div>
-        <div class="sidebar-1"></div>
-        <div class="footer-1"></div>
+      <div class="header-1"></div>
+      <div class="main-1"></div>
+      <div class="sidebar-1"></div>
+      <div class="footer-1"></div>
     </div>
 
     <br />
@@ -93,10 +80,10 @@
     <br />
 
     <div class="grid-container grid-template-columns-rows">
-        <div class="header-2"></div>
-        <div class="main-2"></div>
-        <div class="sidebar-2"></div>
-        <div class="footer-2"></div>
+      <div class="header-2"></div>
+      <div class="main-2"></div>
+      <div class="sidebar-2"></div>
+      <div class="footer-2"></div>
     </div>
 
     <br />
@@ -106,11 +93,10 @@
     <br />
 
     <div class="grid-container grid-template">
-        <div class="header-3"></div>
-        <div class="main-3"></div>
-        <div class="sidebar-3"></div>
-        <div class="footer-3"></div>
+      <div class="header-3"></div>
+      <div class="main-3"></div>
+      <div class="sidebar-3"></div>
+      <div class="footer-3"></div>
     </div>
-
-</body>
+  </body>
 </html>
