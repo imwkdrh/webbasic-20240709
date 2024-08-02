@@ -47,6 +47,7 @@ body{
   width: 36px;
   height: 36px;
   border-radius: 50% ;
+
   background-size: 24px 24px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -54,6 +55,7 @@ body{
 }
 .icon-buttons:hover{
   background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .icon-buttons.search{
 
@@ -76,18 +78,7 @@ body{
     / 1fr 272px;
     gap: 16px;
 }
-@media  and (max-width:900px){
-  #main{
-  margin-top: 85px;
-    width: 712px;
-    display: grid;
-    grid-template:
-      "video video video" 405px
-      "impact report group" 232px
-      / 1fr 1fr 1fr;
-    gap: 3px;
-  }
-}
+
 
 .video{
   grid-area: video;
@@ -105,13 +96,13 @@ body{
   width: 148px;
   height: 102px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   background-color: white;
   background-position: 50%;
   background-size: 94px 94px;
   background-repeat: no-repeat;
-  border-radius: 0px 24px 0px 36px;
+  border-radius: 0px 0px 0px 36px;
   cursor: pointer;
   background-image: url(./images/lamp.gif);
 }
@@ -192,12 +183,36 @@ body{
 .impact{
   background-color: rgba(255,255,0,0.8);
   border-radius: 24px;
+  grid-area: impact;;
 }
 .report {
   background-color: rgba(0  , 0, 0, 0.4);
   border-radius: 24px;
+  grid-area: report;
+    ;
 }
 .group{
   background-color: rgba(0, 0, 255, 0.8);
   border-radius: 24px;
+  grid-area: group;
+    ;
+}
+
+@media screen and (max-width:900px) {
+  #main {
+    margin-top: 85px;
+    width: 712px;
+    display: grid;
+    grid-template:
+      "video video video" 405px
+      "impact report group" 232px
+      / 1fr 1fr 1fr;
+    gap: 3px;
+  }
+
+  
+}
+.video-content {
+  border-radius: 36px;
+  height: 100%;
 }
