@@ -20,6 +20,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
+  background-color: white;
 }
 .header-logo{
   font-size: 2rem;;
@@ -74,13 +76,128 @@ body{
     / 1fr 272px;
     gap: 16px;
 }
+@media  and (max-width:900px){
+  #main{
+  margin-top: 85px;
+    width: 712px;
+    display: grid;
+    grid-template:
+      "video video video" 405px
+      "impact report group" 232px
+      / 1fr 1fr 1fr;
+    gap: 3px;
+  }
+}
+
 .video{
   grid-area: video;
   position: relative;
-
+  
 }
 .video-content{
   width: 100%;
   height: 808px;
+  border-radius: 36px;
   
+}
+
+.video-lens{
+  width: 148px;
+  height: 102px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  background-position: 50%;
+  background-size: 94px 94px;
+  background-repeat: no-repeat;
+  border-radius: 0px 24px 0px 36px;
+  cursor: pointer;
+  background-image: url(./images/lamp.gif);
+}
+.video-lens::before{
+  width: 38px;
+  height: 38px;
+  left: -36px;
+  top: -2px;
+  position: absolute;
+  content: "";
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M36 38h2V0H0v2c19.9 0 36 16.1 36 36z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.video-lens::after {
+  width: 38px;
+  height: 38px;
+  top: 100px;
+  left: 112px;
+  
+  position: absolute;
+  content: "";
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M36 38h2V0H0v2c19.9 0 36 16.1 36 36z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.video-link{
+  width: 318px;
+    height: 100px;
+    bottom: 0px;
+    left: 0px;
+    border-top-right-radius: 36px;
+
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    gap: 20px;
+
+    background-color: white;
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.video-text{
+  position: absolute;
+  top: 130px;
+  left: 140px;
+  color: white;
+ 
+}
+.video-text-title{
+  font-size: 50px;
+  letter-spacing: -1px;
+  white-space: pre-wrap;
+}
+.video-text-sub {
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  margin-top: 20px;
+}
+.video-link-button{
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  color: white;
+  background-color: black;
+  
+  cursor: pointer;
+  line-height: 64px;
+  text-align: center;
+}
+.impact{
+  background-color: rgba(255,255,0,0.8);
+  border-radius: 24px;
+}
+.report {
+  background-color: rgba(0  , 0, 0, 0.4);
+  border-radius: 24px;
+}
+.group{
+  background-color: rgba(0, 0, 255, 0.8);
+  border-radius: 24px;
 }
