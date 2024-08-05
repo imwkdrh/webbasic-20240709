@@ -1,3 +1,11 @@
+:root{
+  --primary-color: rgba(0, 191, 122, 1);
+  --error-color: rgba(255, 84, 64, 1);
+  --gray-color: rgba(138, 146, 166, 1);
+  --drak-gray-color: rgba(64,64,64,1);
+  --default-color: rgba(35, 45, 66, 1);
+}
+
 .body{
   margin: 0px;
 }
@@ -26,7 +34,6 @@
 
   width: 380px;
 
-  background-color: aqua;
   gap: 24px;
 }
 .title-box{
@@ -40,12 +47,12 @@
     font-weight: 700;
     line-height: 173%;
 
-    color: rgba(64, 64, 64, 1);
+    color: var(--drak-gray-color);
 }
 .title-box .logo{
   width: 30px;
   height: 30px;
-  background-color: blue;
+  background-color: rgb(136, 136, 255);
 }
 .input-container{
   display: flex;
@@ -59,11 +66,10 @@
   flex-direction: column;
   gap: 8px;
   
-  background-color: chartreuse;
 }
 
 .input-box .label{
-  color: rgba(138, 146, 166, 1);
+  color: var(--gray-color);
   font-size: 16px;
   font-weight: 400;
 }
@@ -80,5 +86,111 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 175%;
-  color: rgba(35, 45, 66, 1);
+  color: var(--default-color);
+}
+
+input::placeholder{
+  color: var(--gray-color);
+
+}
+.input-box .message{
+  margin-top: -4px;
+  height: 16px;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+.message.error{
+color: var(--error-color);
+}
+.message.primary {
+  color:var(--primary-color);
+}
+.button-container{
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+.primary-button{
+  border-radius: 6px;
+  padding: 8px 24px;
+
+  background-color: var(--primary-color);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  text-align: center;
+
+  color: white;
+}
+.primary-button:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+.full-width{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.link {
+  align-self: center;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+
+  color: rgba(113, 113, 113, 1);
+}
+
+.link:hover{
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.divider{
+  width: 100%;
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+
+.sns-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+}
+.sns-container .title{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-color);
+}
+
+.sns-button-container{
+  display: flex;
+  gap: 24px;
+}
+
+
+.sns-button{
+  border-radius: 50%;
+  
+    width: 56px;
+    height: 56px;
+}
+
+.sns-button:hover{
+  opacity: 0.9;
+  cursor:pointer;
+}
+
+.sns-button.kakao {
+  background-color: yellow;
+}
+
+.sns-button.naver{
+  background-color: greenyellow;
 }
