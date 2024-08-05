@@ -1,25 +1,28 @@
-
-#auth-wrapper{
+#auth-wrapper {
   display: flex;
   width: 100%;
   min-width: 1440px;
   height: 100vh;
-  min-height: 964px; /* 1024-80 px*/
+  min-height: 964px;
+  /* 1024-80 px*/
 }
-.auth-image{
+
+.auth-image {
   width: 830px;
   background-image: url(./images/main-image.png);
   background-size: cover;
-  
+
 }
-.auth-container{
+
+.auth-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
-.auth-box{
+
+.auth-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +32,7 @@
   gap: 24px;
 }
 
-.button-container{
+.button-container {
   align-self: stretch;
 
   display: flex;
@@ -39,22 +42,21 @@
 }
 
 
-.sns-container{
+.sns-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 
 }
-.sns-container .title{
+
+.sns-container .title {
   font-size: 16px;
   font-weight: 400;
   color: var(--gray-color);
 }
 
-.sns-button-container{
+.sns-button-container {
   display: flex;
   gap: 24px;
 }
-
-
