@@ -46,34 +46,80 @@ console.log("==============================");
     - async await 작업은 forEach 메서드로 사용 불가능
 */
 array.forEach(function (item, index) {
-  console.log(`index : ${index}, item : ${item}`);
+  console.log(`item : ${item},index : ${index} `);
 });
+console.log(array);
 console.log("==============================");
 
 /*
-    map(콜백 함수) : 
-    - 
+    map(콜백 함수) : 콜백 함수의 반환값들로 이루어진 새로운 배열을 생성해서 반환
+    - 원본 배열 변경 x
+    - forEach 단순히 요소나 인덱스를 가지고 작업만 진행 (반환값 x), map은 요소나 인덱스를 가지고 작업한 결과로 새로운 배열을 생성 (반환 값 0)
+*/
+var mapArray = array.map(function ($, index) {
+  return index;
+});
+
+console.log(mapArray);
+
+var newArray = array.map(function (item) {
+  return item;
+});
+
+console.log("newArray는 " + newArray);
+
+// map을 일반 for문으로 구성
+// 1. 빈배열 생성
+var newArray = [];
+// 2. for문 작성
+for (var index in array) {
+  var item = array[index];
+
+  // 3. 빈배열에 요소 추가
+  newArray.push(item + item);
+}
+console.log(newArray);
+console.log("==============================");
+
+/*
+    filter(콜백 함수) : 콜백 함수의 반환값이 true인 배열의 요소의 값만 추출한 새로운 배열을 생성
+    - 배열의 특정 케이스만 필터링 조건으로 추출해서 새로운 배열을 만들고 싶을 때 사용
     - 
 */
+var evenArray = array.filter(function (item, index) {
+  return index % 2 === 0;
+});
+console.log(evenArray);
+
+// filter 일반 for문으로 구성
+// 1. 빈배열 생성
+var newArray2 = [];
+// 2. for문 작성
+for (var index in array) {
+  var item = array[index];
+
+  // 3. 빈배열에 요소 추가
+  if (index % 2 === 0) newArray2.push(item);
+}
+
+console.log(newArray2);
+console.log("==============================");
+
+/*
+    find(콜백함수) : 콜백 함수의 결과가 true인 첫번째 요소를 반환
+*/
+var result = array.find(function (item, index) {
+  return index === 6;
+});
+console.log(result);
 
 console.log("==============================");
 
 /*
-    filter(콜백 함수) : 
-    - 
-    - 
+    findIndex(콜백함수) : 콜백 함수 결과가 true인 첫번째 요소의 인덱스를 반환
 */
-
-console.log("==============================");
-
-/*
-    find(value, index) : 
-*/
-
-console.log("==============================");
-
-/*
-    find(value, index) : 
-*/
-
+var result = array.findIndex(function (item, index) {
+  return item === 2;
+});
+console.log(result);
 console.log("==============================");
