@@ -56,8 +56,10 @@
           method: "POST",
           body: "stringJson",
         };
+
       var queryString = new URLSearchParams(king).toString();
       fetch("http://localhost:5500/?" + queryString);
+
       var response = fetch("https://reqres.in/api/users?page=2").then(function (
         response
       ) {
