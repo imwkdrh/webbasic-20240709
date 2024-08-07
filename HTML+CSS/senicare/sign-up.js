@@ -73,6 +73,6 @@ function userIdButtonClickHandler(event) {
     userIdMessageElement.className = "message primary";
   }
 }
-
+//;'
 userIdElement.addEventListener("input", userIdInputHandler);
 userIdButtonElement.addEventListener("click", userIdButtonClickHandler);
