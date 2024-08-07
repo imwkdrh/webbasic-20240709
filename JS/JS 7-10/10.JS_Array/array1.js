@@ -164,4 +164,3 @@ console.log("==============================");
 */
 // console.log(newFruits.splice(1, 2, "melon"), newFruits);
 console.log(newFruits.splice(0, 1), newFruits);
-// d
