@@ -54,3 +54,14 @@ let newNumbers2 = [...numbers, ...numbers2]; // => [1,2,3,4,5,6,7,8]
 console.log(newNumbers2);
 newNumbers2 = [...numbers2, ...numbers]; // => [5,6,7,8,1,2,3,4]
 console.log(newNumbers2);
+
+// 객체 복사, 연결, 요소 추가에 사용
+const king = {
+  name: "이성계",
+  tombName: "태조",
+};
+let newKing = {
+  ...king,
+};
+newKing.name = "이방과";
+console.log(newKing);
