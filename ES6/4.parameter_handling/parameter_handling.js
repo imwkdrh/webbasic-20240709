@@ -55,6 +55,10 @@ console.log(newNumbers2);
 newNumbers2 = [...numbers2, ...numbers]; // => [5,6,7,8,1,2,3,4]
 console.log(newNumbers2);
 
+// 배열 요소 추가에 사용
+newNumber2 = [...newNumbers2, 9, 10];
+console.log(newNumber2);
+
 // 객체 복사, 연결, 요소 추가에 사용
 const king = {
   name: "이성계",
@@ -64,4 +68,26 @@ let newKing = {
   ...king,
 };
 newKing.name = "이방과";
+console.log(king);
+console.log(newKing);
+
+const kingInfo = {
+  address: "서울특별시",
+  country: "고려",
+};
+
+newKing = {
+  ...king,
+  ...kingInfo,
+};
+console.log(newKing);
+
+newKing = { ...king, birth: "1335-11-04" };
+console.log(newKing);
+
+newKing = { ...king, name: "이단", birth: "1335-11-04" };
+console.log(newKing);
+
+// ...연산자가 덮어씌우기때문에 name:"이단" 부분이 덮어씌워져서 name:"이성계"가 된다
+newKing = { name: "이단", ...king, birth: "1335-11-04" };
 console.log(newKing);
