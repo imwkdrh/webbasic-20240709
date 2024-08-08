@@ -17,7 +17,6 @@
             <div class="title">시니케어</div>
             <div class="logo"></div>
           </div>
-
           <div class="sns-container">
             <div class="title">SNS 회원가입</div>
             <div class="sns-button-container">
@@ -26,6 +25,7 @@
             </div>
           </div>
           <div style="width: 64px" class="divider"></div>
+
           <div class="input-container">
             <div class="input-box">
               <div class="label">이름</div>
@@ -63,9 +63,9 @@
                   placeholder="비밀번호를 입력해주세요."
                 />
               </div>
-
               <div id="user-password-message" class="message"></div>
             </div>
+
             <div class="input-box">
               <div class="label">비밀번호 확인</div>
               <div class="input-area">
@@ -75,7 +75,6 @@
                   placeholder="비밀번호를 입력해주세요."
                 />
               </div>
-
               <div id="user-password-check-message" class="message"></div>
             </div>
 
@@ -85,29 +84,33 @@
                 <input
                   id="user-telnumber"
                   type="text"
-                  placeholder="-빼고 입력해주세요"
+                  placeholder="-빼고 입력해주세요."
                 />
                 <div id="user-telnumber-button" class="input-button disable">
-                  전화번호 확인
+                  전화번호 인증
                 </div>
               </div>
               <div id="user-telnumber-message" class="message"></div>
             </div>
-            <div class="input-box">
-              <div id="auth-number" class="label">인증번호</div>
+
+            <div id="auth-number-box" class="input-box" style="display: none">
+              <div class="label">인증번호</div>
               <div class="input-area">
                 <input
-                  id="auth-number-button"
+                  id="auth-number"
                   type="text"
-                  placeholder="인증번호 4자리를 입력해주세요"
+                  placeholder="인증번호 4자리를 입력해주세요."
                 />
-                <div class="input-button disable">인증 확인</div>
+                <div id="auth-number-button" class="input-button disable">
+                  인증 확인
+                </div>
               </div>
-              <div id="auth-number-button" class="message"></div>
+              <div id="auth-number-message" class="message"></div>
             </div>
           </div>
+
           <div class="button-container">
-            <div id="sign-up-button" class="button primary full-width disable">
+            <div id="sign-up-button" class="button disable full-width">
               회원가입
             </div>
             <div class="link" onclick="location.href='./sign-in.html'">
@@ -117,6 +120,7 @@
         </div>
       </div>
     </div>
+
     <script src="./sign-up.js"></script>
   </body>
 </html>
