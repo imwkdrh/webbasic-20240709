@@ -57,6 +57,34 @@ function userIdInputHandler(event) {
   userIdButtonElement.className =
     "input-button " + (userId ? "active" : "disable");
 }
+
+function userPasswordInputHandler(event) {
+  var pattern = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,13}$/;
+  var userPassword = event.target.value;
+
+  userPasswordMessageElement.textContent = "";
+  userPasswordMessageElement.className = "message";
+
+  var isMatched = pattern.test(userPassword);
+  if (!isMatched && userPassword) {
+    userPasswordMessageElement.textContent = "8~13자, 영문, 숫자 포함";
+    userPasswordMessageElement.className = "message error";
+  }
+}
+function userPasswordCheckInputHandler(event) {
+  var userPasswordCheck = event.target.value;
+  var userPassword = userPasswordElement.value;
+  var isEqual = userPassword === userPasswordCheck;
+  if (isEqual || !userPasswordCheck) {
+    userPasswordCheckMessageElement.textContent = "비밀번호가 일치합니다.";
+    userPasswordCheckMessageElement.className = "message primary";
+  } else {
+    userPasswordCheckMessageElement.textContent =
+      "비밀번호가 일치하지 않습니다.";
+    userPasswordCheckMessageElement.className = "message error";
+  }
+}
+
 function userIdButtonClickHandler(event) {
   var userId = userIdElement.value;
   if (!userId) return;
@@ -73,6 +101,11 @@ function userIdButtonClickHandler(event) {
     userIdMessageElement.className = "message primary";
   }
 }
-//;'
+
 userIdElement.addEventListener("input", userIdInputHandler);
+userPasswordElement.addEventListener("input", userPasswordInputHandler);
+userPasswordCheckElement.addEventListener(
+  "input",
+  userPasswordCheckInputHandler
+);
 userIdButtonElement.addEventListener("click", userIdButtonClickHandler);
